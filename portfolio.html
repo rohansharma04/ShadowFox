@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rohan| Developer Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    #about {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    #about img {
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      margin-bottom: 1rem;
+    }
+
+    .button-group a button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .button-group a:nth-child(1) button { background: #333; color: white; }
+    .button-group a:nth-child(2) button { background: #0077b5; color: white; }
+    .button-group a:nth-child(3) button { background: #444; color: white; }
+
+    .projects {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: calc(33% - 2rem);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, textarea {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button[type="submit"] {
+      padding: 0.5rem;
+      background: #222;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rohan | Developer Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <img src="c:\Users\rohan\OneDrive\Pictures\Camera Roll\rohan2.jpg" alt="Rohan Kumar photo" />
+    <h2>Hello, I'm Rohan</h2>
+    <p>A methodical learner exploring C programming, recursion, and algorithmic thinking. I love building clean, modular code and solving problems step-by-step.</p>
+    <div class="button-group">
+      <a href="https://github.com/rohansharma04" target="_blank">
+        <button>GitHub</button>
+      </a>
+      <a href="https://www.linkedin.com/in/rohan-kumar-4ba052365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+        <button>LinkedIn</button>
+      </a>
+      <a href=".vscode/Rohan resume.pdf" target="_blank">
+        <button>Resume</button>
+      </a>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card" onclick="openProject('https://github.com/rohansharma04/Fibonacci-Resursion.git')">
+        <h3>C Programming projects</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Rohan. Built with ❤ in HTML, CSS & JS.</p>
+  </footer>
+
+  <script>
+    function openProject(url) {
+      window.open(url, '_blank');
+    }
+
+    function submitForm(e) {
+      e.preventDefault();
+      alert("Thanks for reaching out! I'll get back to you soon.");
+    }
+  </script>
+
+</body>
+</html>
